@@ -25,8 +25,8 @@
   --background: #f5f6f7; /* background */
   --white: #ffffff; /* white */
   --dark: #dbe2e6; /* dark */
-  --primary-base: #1c8ef1; /* primary/base */
-  --primary-light: #edf4ff; /* primary/light */
+  --primary-base: #cb3451; /* primary/base */
+  --primary-light: #fbeff1; /* primary/light */
   --error-base: #eb2e03; /* error/base */
   --error-light: #ffe4de; /* error/light */
   --error-faded: #eb2e031a; /* error/faded — 10% of #eb2e03 */
@@ -42,7 +42,7 @@
   --green-faded: #68d13f1a; /* green/faded — 10% of #68d13f */
   --variant-base: #654dc4; /* variant/base */
   --variant-faded: #654dc41a; /* variant/faded */
-  --semantic-button: #1c8ef1; /* semantic/button */
+  --semantic-button: #cb3451; /* semantic/button */
 
   /* Numbers — Figma number variables (px) */
   --xsmall: 2px; /* xsmall */
@@ -94,7 +94,7 @@
   --shadow-button-primary:
     inset 0 0 10px 0 #ffffff66, 0 0 2px 0 #00000066, 0 2px 8px 0 #0000001a; /* Button/Primary Shadow */
   --shadow-button-white:
-    inset 0 0 10px 0 #1c8ef126, 0 0 2px 0 #00000066, 0 2px 8px 0 #0000001a; /* Button/White Inner Shadow */
+    inset 0 0 10px 0 #cb345126, 0 0 2px 0 #00000066, 0 2px 8px 0 #0000001a; /* Button/White Inner Shadow */
   --shadow-button-secondary: inset 0 0 4px 0 #ffffff80; /* Button/Secondary Shadow */
   --shadow-modal-base: 0 0 100px 0 #0000001a, 0 2px 10px 0 #00000026; /* Modal/Base Shadow */
 
