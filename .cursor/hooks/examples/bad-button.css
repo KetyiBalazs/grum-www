@@ -1,0 +1,19 @@
+/* Example FAIL — invented button with raw colors.
+   Run: node .cursor/hooks/check-ds.mjs .cursor/hooks/examples/bad-button.css
+   This file is skipped by the stop hook so it does not loop the agent. */
+
+.my-special-button {
+  background: #505050;
+  color: #21303a;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+}
+
+/* Example PASS for the same control:
+.btn.btn-primary {
+  background: var(--semantic-button);
+  color: var(--white);
+  border-radius: var(--corner-medium);
+  box-shadow: var(--shadow-button-primary);
+}
+*/

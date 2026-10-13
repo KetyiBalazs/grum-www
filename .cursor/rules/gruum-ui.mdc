@@ -1,0 +1,28 @@
+---
+description: After HTML/CSS edits, use existing Gruum components and tokens only
+globs: "**/*.{html,css}"
+alwaysApply: false
+---
+
+# Gruum UI implementation
+
+When adding or changing UI, reuse components from `components.css` and type/color from `tokens.css`. Do not invent a new button, chip, or color.
+
+## Do
+
+- Buttons: `.btn` plus `.btn-primary` / `.btn-secondary` / `.btn-white` / `.btn-tertiary`
+- Type: `.headline-main` `.headline-secondary` `.headline-small` `.body-normal` `.body-small` …
+- Color: `var(--text-primary)`, `var(--semantic-button)`, never a raw hex
+- Radius/shadow: `var(--corner-medium)`, `var(--shadow-button-primary)`, …
+
+## Don’t
+
+```html
+<button class="my-special-button">Save</button>
+```
+
+```css
+.my-special-button { background: #505050; }
+```
+
+A `postToolUse` / `stop` hook in `.cursor/hooks.json` fails the turn if new HTML/CSS uses raw color or an invented `button` class. Fix FAILs before finishing.

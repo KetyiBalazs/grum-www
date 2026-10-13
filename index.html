@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta
       name="description"
-      content="The Design Consistency Layer for Agents and Teams. Join the Grum waitlist."
+      content="Grum turns your code into a design contract that Claude, Cursor and Codex can follow, and flags drift the moment something breaks."
     />
-    <meta name="theme-color" content="#f5f6f7" />
+    <meta name="theme-color" content="var(--background)" />
     <title>Coming soon — Grum</title>
     <link rel="icon" href="/assets/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/tokens.css" />
@@ -17,69 +17,249 @@
   <body class="coming-soon-body">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <main id="main" class="coming-soon">
-      <div class="coming-soon-stack">
-        <div class="coming-soon-hero">
-          <div class="coming-soon-lockup">
-            <img
-              class="coming-soon-mark"
-              src="/assets/grum-mark.svg"
-              alt=""
-              width="32"
-              height="32"
-            />
-            <img
-              class="coming-soon-wordmark"
-              src="/assets/grum-wordmark.svg"
-              alt="Grum"
-              width="68.0468"
-              height="19.7101"
-            />
-          </div>
+    <div class="cs-stripe cs-stripe-left" aria-hidden="true">
+      <img src="/assets/coming-soon/stripe.svg" alt="" width="50" height="1024" />
+    </div>
+    <div class="cs-stripe cs-stripe-right" aria-hidden="true">
+      <img src="/assets/coming-soon/stripe.svg" alt="" width="50" height="1024" />
+    </div>
 
-          <div class="coming-soon-copy">
-            <h1 class="headline-main">
-              The Design Consistency Layer for Agents and Teams
-            </h1>
-            <p class="body-normal">
-              Grum keeps your design system in sync across Figma, code, and AI
-              tools. So everyone building for your brand uses the same visual
-              language.
-            </p>
-          </div>
+    <main id="main" class="cs-frame">
+      <div class="cs-grid" aria-hidden="true">
+        <img src="/assets/coming-soon/grid.svg" alt="" width="802" height="1026" />
+      </div>
+
+      <header class="cs-header appear-wave-item" data-appear>
+        <div class="cs-logo-wrap">
+          <img
+            src="/assets/coming-soon/logo.svg"
+            alt="Grum"
+            width="112"
+            height="29.278"
+          />
+        </div>
+        <div class="cs-rule" aria-hidden="true">
+          <img src="/assets/coming-soon/rule.svg" alt="" width="2" height="802" />
+        </div>
+      </header>
+
+      <section class="cs-hero">
+        <p class="cs-chip appear-wave-item" data-appear>Early access</p>
+        <div class="cs-lede">
+          <h1 class="appear-wave-item" data-appear>Design Consistency Layer</h1>
+          <p class="appear-wave-item" data-appear>
+            Grum turns your code into a design contract that Claude, Cursor and
+            Codex can follow, and flags drift the moment something breaks.
+          </p>
+        </div>
+      </section>
+
+      <section class="cs-panel appear-wave-item" data-appear aria-labelledby="early-access-title">
+        <span class="cs-corner cs-corner-tl" aria-hidden="true"></span>
+        <span class="cs-corner cs-corner-tr" aria-hidden="true"></span>
+        <span class="cs-corner cs-corner-bl" aria-hidden="true"></span>
+        <span class="cs-corner cs-corner-br" aria-hidden="true"></span>
+
+        <div class="cs-panel-copy">
+          <h2 id="early-access-title">Get early access!</h2>
+          <p>
+            Turn your code into a design contract your agents can follow, and
+            catch drift before it ships.
+          </p>
         </div>
 
-        <form
-          class="coming-soon-form"
-          data-source="index"
-          action="#"
-          method="post"
-        >
-          <label class="visually-hidden" for="waitlist-email"
-            >E-mail address</label
-          >
+        <form class="coming-soon-form" data-source="index" action="#" method="post">
+          <label class="visually-hidden" for="waitlist-email">Your email</label>
           <input
-            class="body-small"
             id="waitlist-email"
             name="email"
             type="email"
             autocomplete="email"
             required
-            placeholder="E-mail address"
+            placeholder="Your email"
           />
-          <button class="body-small" type="submit">Join the waitlist</button>
-          <p class="coming-soon-thanks body-normal">You’re on the list.</p>
-          <p class="coming-soon-error body-small">
-            Couldn’t join the waitlist. Try again.
-          </p>
+          <button type="submit" data-sound="action">Get early access</button>
+          <p class="coming-soon-thanks">You’re on the list.</p>
+          <p class="coming-soon-error">Couldn’t join the waitlist. Try again.</p>
         </form>
-      </div>
+      </section>
 
-      <p class="coming-soon-contact body-small">
-        Contact: <a href="mailto:hello@ketyi.me">hello@ketyi.me</a>
-      </p>
+      <footer class="cs-footer appear-wave-item" data-appear>
+        <div class="cs-rule" aria-hidden="true">
+          <img src="/assets/coming-soon/rule-bottom.svg" alt="" width="2" height="802" />
+        </div>
+        <div class="cs-footer-copy">
+          <p class="cs-contact">
+            Contact:
+            <a href="mailto:balazs@grum.so">balazs@grum.so</a>
+          </p>
+          <p class="cs-meta">
+            <span>Made in San Francisco</span>
+            <img src="/assets/coming-soon/dot.svg" alt="" width="5" height="5" />
+            <span class="cs-time">
+              <time id="cs-time" datetime="">1:42 PM</time>
+              <svg id="cs-weather" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Clear">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2" />
+                <path d="M12 20v2" />
+                <path d="m4.93 4.93 1.41 1.41" />
+                <path d="m17.66 17.66 1.41 1.41" />
+                <path d="M2 12h2" />
+                <path d="M20 12h2" />
+                <path d="m6.34 17.66-1.41 1.41" />
+                <path d="m19.07 4.93-1.41 1.41" />
+              </svg>
+            </span>
+          </p>
+        </div>
+      </footer>
     </main>
 
+    <noscript>
+      <style>
+        .appear-wave-item { opacity: 1; }
+      </style>
+    </noscript>
+    <script>
+      (function () {
+        var items = Array.prototype.slice.call(document.querySelectorAll("[data-appear]"));
+        if (!items.length) return;
+
+        var stagger = 130;
+        var duration = 1080;
+        var distance = 14;
+        var blur = 6;
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        items.forEach(function (item, index) {
+          item.style.setProperty("--appear-wave-duration", duration + "ms");
+          item.style.setProperty("--appear-wave-distance", distance + "px");
+          item.style.setProperty("--appear-wave-blur", blur + "px");
+          item.style.setProperty("--appear-wave-delay", index * stagger + "ms");
+        });
+
+        if (reduced) {
+          items.forEach(function (item) {
+            item.classList.add("is-appeared");
+          });
+          return;
+        }
+
+        document.querySelector(".cs-frame").getBoundingClientRect();
+
+        items.forEach(function (item) {
+          var finish = function (event) {
+            if (event.animationName !== "appear-wave") return;
+            item.removeEventListener("animationend", finish);
+            item.classList.remove("is-appearing");
+            item.classList.add("is-appeared");
+          };
+          item.addEventListener("animationend", finish);
+          item.classList.add("is-appearing");
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) return;
+        meta.content = getComputedStyle(document.documentElement)
+          .getPropertyValue("--background")
+          .trim();
+      })();
+    </script>
+    <script src="/click.js"></script>
     <script src="/waitlist.js"></script>
+    <script>
+      (function () {
+        var node = document.getElementById("cs-time");
+        if (!node) return;
+
+        var format = new Intl.DateTimeFormat("en-US", {
+          timeZone: "America/Los_Angeles",
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: true,
+        });
+
+        var render = function () {
+          var now = new Date();
+          var text = format.format(now).replace(/[\u00a0\u202f]/g, " ");
+          node.textContent = text;
+          node.dateTime = now.toISOString();
+        };
+
+        render();
+        window.setInterval(render, 1000 * 30);
+      })();
+    </script>
+    <script>
+      (function () {
+        var icon = document.getElementById("cs-weather");
+        if (!icon) return;
+
+        var marks = {
+          sun: '<circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />',
+          moon: '<path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />',
+          cloud: '<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />',
+          "cloud-sun": '<path d="M12 2v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="M20 12h2" /><path d="m19.07 4.93-1.41 1.41" /><path d="M15.947 12.65a4 4 0 0 0-5.925-4.128" /><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z" />',
+          "cloud-moon": '<path d="M13 16a3 3 0 0 1 0 6H7a5 5 0 1 1 4.9-6z" /><path d="M18.376 14.512a6 6 0 0 0 3.461-4.127c.148-.625-.659-.97-1.248-.714a4 4 0 0 1-5.259-5.26c.255-.589-.09-1.395-.716-1.248a6 6 0 0 0-4.594 5.36" />',
+          "cloud-fog": '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M16 17H7" /><path d="M17 21H9" />',
+          "cloud-drizzle": '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M8 19v1" /><path d="M8 14v1" /><path d="M16 19v1" /><path d="M16 14v1" /><path d="M12 21v1" /><path d="M12 16v1" />',
+          "cloud-rain": '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M16 14v6" /><path d="M8 14v6" /><path d="M12 16v6" />',
+          "cloud-snow": '<path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M8 15h.01" /><path d="M8 19h.01" /><path d="M12 17h.01" /><path d="M12 21h.01" /><path d="M16 15h.01" /><path d="M16 19h.01" />',
+          "cloud-lightning": '<path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973" /><path d="m13 12-3 5h4l-3 5" />',
+        };
+
+        var labels = {
+          sun: "Clear",
+          moon: "Clear",
+          "cloud-sun": "Partly cloudy",
+          "cloud-moon": "Partly cloudy",
+          cloud: "Overcast",
+          "cloud-fog": "Fog",
+          "cloud-drizzle": "Drizzle",
+          "cloud-rain": "Rain",
+          "cloud-snow": "Snow",
+          "cloud-lightning": "Thunderstorm",
+        };
+
+        var choose = function (code, isDay) {
+          if (code === 0) return isDay ? "sun" : "moon";
+          if (code === 1 || code === 2) return isDay ? "cloud-sun" : "cloud-moon";
+          if (code === 3) return "cloud";
+          if (code === 45 || code === 48) return "cloud-fog";
+          if (code >= 51 && code <= 57) return "cloud-drizzle";
+          if ((code >= 61 && code <= 67) || (code >= 80 && code <= 82)) return "cloud-rain";
+          if ((code >= 71 && code <= 77) || code === 85 || code === 86) return "cloud-snow";
+          if (code >= 95) return "cloud-lightning";
+          return isDay ? "sun" : "moon";
+        };
+
+        var paint = function (code, isDay) {
+          var name = choose(code, isDay);
+          icon.innerHTML = marks[name];
+          icon.setAttribute("aria-label", labels[name]);
+        };
+
+        var load = function () {
+          fetch(
+            "https://api.open-meteo.com/v1/forecast?latitude=37.7749&longitude=-122.4194&current=weather_code,is_day&timezone=America%2FLos_Angeles"
+          )
+            .then(function (response) {
+              if (!response.ok) throw new Error("weather");
+              return response.json();
+            })
+            .then(function (data) {
+              if (!data.current) return;
+              paint(data.current.weather_code, data.current.is_day === 1);
+            })
+            .catch(function () {});
+        };
+
+        load();
+        window.setInterval(load, 1000 * 60 * 15);
+      })();
+    </script>
   </body>
 </html>

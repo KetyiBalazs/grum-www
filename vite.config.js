@@ -2,12 +2,32 @@ import { defineConfig } from "vite";
 
 const prettyPaths = {
   "/coming-soon": "/index.html",
-  "/home": "/home.html",
   "/terms": "/terms.html",
   "/privacy": "/privacy.html",
-  "/contact": "/contact.html",
-  "/design-system": "/design-system.html",
-  "/playground": "/playground.html",
+};
+
+const hiddenPages = new Set([
+  "/home",
+  "/home.html",
+  "/design-system",
+  "/design-system.html",
+  "/playground",
+  "/playground.html",
+  "/contact",
+  "/contact.html",
+  "/manifesto",
+  "/manifesto.html",
+]);
+
+const blockHiddenPages = (req, res, next) => {
+  if (hiddenPages.has(pathKey(req))) {
+    res.statusCode = 404;
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader("X-Robots-Tag", "noindex");
+    res.end("Not found");
+    return;
+  }
+  next();
 };
 
 const pathKey = (req) => {
@@ -50,9 +70,11 @@ export default defineConfig({
     {
       name: "pretty-html-urls",
       configureServer(server) {
+        server.middlewares.use(blockHiddenPages);
         server.middlewares.use(rewritePrettyUrls);
       },
       configurePreviewServer(server) {
+        server.middlewares.use(blockHiddenPages);
         server.middlewares.use(rewritePrettyUrls);
       },
     },

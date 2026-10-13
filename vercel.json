@@ -14,17 +14,16 @@
     },
     { "source": "/coming-soon", "destination": "/index.html" },
     { "source": "/coming-soon/", "destination": "/index.html" },
-    { "source": "/home", "destination": "/home.html" },
-    { "source": "/home/", "destination": "/home.html" },
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/terms/", "destination": "/terms.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/privacy/", "destination": "/privacy.html" },
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/contact/", "destination": "/contact.html" },
-    { "source": "/design-system", "destination": "/design-system.html" },
-    { "source": "/design-system/", "destination": "/design-system.html" },
-    { "source": "/playground", "destination": "/playground.html" },
-    { "source": "/playground/", "destination": "/playground.html" }
+    { "source": "/privacy/", "destination": "/privacy.html" }
+  ],
+  "redirects": [
+    { "source": "/home.html", "destination": "/home", "permanent": false },
+    { "source": "/design-system.html", "destination": "/design-system", "permanent": false },
+    { "source": "/playground.html", "destination": "/playground", "permanent": false },
+    { "source": "/contact.html", "destination": "/contact", "permanent": false },
+    { "source": "/manifesto.html", "destination": "/manifesto", "permanent": false }
   ]
 }

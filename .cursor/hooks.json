@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "hooks": {
+    "postToolUse": [
+      {
+        "command": "node .cursor/hooks/check-ds.mjs",
+        "matcher": "Write|StrReplace",
+        "timeout": 15
+      }
+    ],
+    "stop": [
+      {
+        "command": "node .cursor/hooks/check-ds.mjs",
+        "timeout": 20,
+        "loop_limit": 3
+      },
+      {
+        "command": "npx --no-install @grum-os/cli hook stop"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "npx --no-install @grum-os/cli hook after-file-edit"
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": "npx --no-install @grum-os/cli hook before-shell"
+      }
+    ]
+  }
+}

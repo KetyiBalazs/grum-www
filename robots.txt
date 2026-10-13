@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /home
+Disallow: /home.html
+Disallow: /design-system
+Disallow: /design-system.html
+Disallow: /playground
+Disallow: /playground.html
+Disallow: /contact
+Disallow: /contact.html
+Disallow: /manifesto
+Disallow: /manifesto.html

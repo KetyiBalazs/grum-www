@@ -179,6 +179,10 @@ body {
   gap: 10px;
 }
 
+.feature-row p {
+  margin: 0;
+}
+
 .feature-copy {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,15 @@
+---
+description: Styles in this repository follow a design contract reviewed in Grum.
+globs: **/*.css,**/*.scss,**/*.tsx,**/*.jsx,**/*.vue,**/*.svelte
+alwaysApply: true
+---
+<!-- written by grum init cursor -->
+
+The design contract for this repository (its color, typography, spacing and radius tokens, and its buttons) lives in Grum. Before writing or restyling UI, including any button, call the Cursor tool `grum_contract`.
+Before you stop, call `grum_check` and resolve new drift with contract tokens or the user's chosen review path. Pending or allowed reviews cover drift; a failed review request must be reported and is not approval.
+To set up or repair Grum, call `grum_doctor` or run `npx --yes @grum-os/cli doctor --agent cursor --json` and follow its JSON. Do not ask the user to open a terminal or type a command.
+If the Grum tools (grum_contract, grum_check, grum_request_review) aren't in your tool list, say so in the first sentence of your reply, before any other work, and tell the user to switch on "grum" in Cursor Settings > Tools & MCP (Cursor keeps a project's new tools off until then). Then carry on: read .grum/contract.json and follow it. To run Grum from a shell, run only this exact command: `npx --yes @grum-os/cli` (for example `npx --yes @grum-os/cli check`, `npx --yes @grum-os/cli request <key> --reason "..." --url "<page>"`). Do not search the computer for a grum program, and do not read the CLI's own files.
+Use the contract's tokens for color, typography, spacing and radius instead of literal values, and its buttons instead of a raw <button> or one-off classes: render the listed component with one of its looks, selected the way the contract says. Do not add a button look, variant or state, or change one. When the contract has no token or button for the job, ask the user once: "This style isn't in your project's design contract.
+
+1. Use an existing token or button.
+2. Keep it and request review." Do not write the off-contract value or request review until they answer, and if they already answered in this conversation, follow that choice. After they choose review, call grum_request_review once with all drift keys that render on the same page, their reason and that page URL (or run `npx --yes @grum-os/cli request <key> [<key>...] --reason "..." --url "<page>"` once); Grum captures the page once for the reviewer. If it fails: Report this to the user and stop. Do not retry unless the user asks or the thing it names has changed, and do not poll or inspect browser tabs or processes. A failed request is not approval and does not revoke their choice. A rejected style is not offered again: change the code to use the contract. Never edit .grum files to make a check pass.
