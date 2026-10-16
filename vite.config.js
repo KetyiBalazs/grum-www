@@ -4,6 +4,7 @@ const prettyPaths = {
   "/coming-soon": "/index.html",
   "/terms": "/terms.html",
   "/privacy": "/privacy.html",
+  "/blog": "/blog/index.html",
 };
 
 const hiddenPages = new Set([
@@ -39,7 +40,9 @@ const pathKey = (req) => {
 const rewritePrettyUrls = (req, _res, next) => {
   const raw = req.url || "";
   const [, query] = raw.split("?");
-  const mapped = prettyPaths[pathKey(req)];
+  const path = pathKey(req);
+  const blogPost = /^\/blog\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(path);
+  const mapped = prettyPaths[path] || (blogPost ? `${path}.html` : undefined);
   if (mapped) {
     req.url = mapped + (query ? `?${query}` : "");
   }

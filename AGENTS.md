@@ -2,11 +2,11 @@
 
 ## Blog publishing
 
-Apply these conventions whenever creating or editing blog content, even when the request does not explicitly mention this process. This describes the agreed approach; the blog has not been implemented yet.
+Apply these conventions whenever creating or editing blog content, even when the request does not explicitly mention this process.
 
 - Keep the blog file-based and statically served. Use the existing HTML/Vite setup; a database or CMS is not needed for publishing posts.
 - Use `/blog` for the post listing and `/blog/<slug>` for each article. Use lowercase, hyphen-separated slugs and keep published URLs stable.
-- When implementing the blog, put the listing in `blog/index.html` and articles in `blog/<slug>.html`. Reuse shared blog styles and the existing Grum design contract.
+- Put the listing in `blog/index.html` and articles in `blog/<slug>.html`. Reuse `blog.css`, the shared components, and the existing Grum design contract. Use `blog/what-is-a-design-contract.html` as the article template, updating its content, date, canonical URL, social metadata, and structured data for each post.
 - Keep clean URLs working in both local Vite development/preview (`vite.config.js`) and deployment (`vercel.json`). Account for trailing slashes and ensure unknown post slugs return a 404.
 - Give every post a unique page title, meta description, canonical URL, and social sharing metadata. Include a visible article title, publication date, and author; use semantic article markup and descriptive image alt text.
 - When adding a post, update the blog listing with its title, date, excerpt, and clean URL. List posts newest first and keep unpublished drafts out of the public listing and deployment.

@@ -17,7 +17,11 @@
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/terms/", "destination": "/terms.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/privacy/", "destination": "/privacy.html" }
+    { "source": "/privacy/", "destination": "/privacy.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/blog/", "destination": "/blog/index.html" },
+    { "source": "/blog/:slug([a-z0-9]+(?:-[a-z0-9]+)*)", "destination": "/blog/:slug.html" },
+    { "source": "/blog/:slug([a-z0-9]+(?:-[a-z0-9]+)*)/", "destination": "/blog/:slug.html" }
   ],
   "redirects": [
     { "source": "/home.html", "destination": "/home", "permanent": false },

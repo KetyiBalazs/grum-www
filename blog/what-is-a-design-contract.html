@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What is a design contract? — Grum</title>
+    <meta name="description" content="What a design contract is, why we use one, and how it helps designers, engineers, and teams carry design decisions into code." />
+    <meta name="author" content="Grum" />
+    <link rel="canonical" href="https://www.grum.so/blog/what-is-a-design-contract" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Grum" />
+    <meta property="og:title" content="What is a design contract?" />
+    <meta property="og:description" content="A shared agreement about how a product gets built—and how its design decisions survive the next change." />
+    <meta property="og:url" content="https://www.grum.so/blog/what-is-a-design-contract" />
+    <meta property="og:image" content="https://www.grum.so/assets/favicon.png" />
+    <meta property="og:image:alt" content="Grum mark" />
+    <meta property="article:published_time" content="2026-10-15" />
+    <meta property="article:author" content="Grum" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/tokens.css" />
+    <link rel="stylesheet" href="/components.css" />
+    <link rel="stylesheet" href="/blog.css" />
+    <script src="/posthog.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What is a design contract?",
+        "description": "What a design contract is, why we use one, and how it helps designers, engineers, and teams carry design decisions into code.",
+        "datePublished": "2026-10-15",
+        "author": { "@type": "Organization", "name": "Grum", "url": "https://www.grum.so" },
+        "publisher": { "@type": "Organization", "name": "Grum", "url": "https://www.grum.so" },
+        "mainEntityOfPage": "https://www.grum.so/blog/what-is-a-design-contract"
+      }
+    </script>
+  </head>
+  <body class="blog-body">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="blog-shell">
+      <nav class="blog-nav body-small" aria-label="Main navigation">
+        <a href="/" aria-label="Grum home"><img src="/assets/coming-soon/logo.svg" alt="Grum" width="112" height="30" /></a>
+        <a href="/blog">All articles</a>
+      </nav>
+      <main id="main">
+        <article>
+          <header class="blog-hero">
+            <p class="body-small">Design contracts</p>
+            <h1 class="headline-main">What is a design contract?</h1>
+            <p class="blog-intro">A shared agreement about how a product gets built—and how its design decisions survive the next change.</p>
+            <div class="blog-meta body-small"><span>By Grum</span><time datetime="2026-10-15">October 15, 2026</time></div>
+          </header>
+
+          <div class="blog-section">
+            <p>You agree on a button. A few weeks later, the product has several versions of it. One has a different radius. Another uses a hardcoded color. A third was rebuilt for a new screen because someone couldn’t find the original.</p>
+            <p>Each change may look reasonable on its own. Together, they start to undo the decisions the team already made. The cost shows up in repeated reviews, extra implementation work, and a product that feels less coherent with every release.</p>
+            <p>This is the problem we use a design contract to address.</p>
+            <aside class="blog-summary" aria-label="Definition">
+              <p><strong>At Grum, a design contract is an explicit, checkable agreement about the design decisions an implementation should follow:</strong> the tokens to reference, the components and states to reuse, and the process for changing them.</p>
+            </aside>
+            <p>“Contract” describes a working agreement between the people and tools building the product. It gives those decisions a form that designers can review, engineers can implement, and coding agents can read.</p>
+          </div>
+
+          <nav class="blog-section blog-contents body-normal" aria-label="In this article">
+            <h2 class="headline-small">In this article</h2>
+            <a href="#why-we-use-one">Why we use a design contract</a>
+            <a href="#design-system-contract">Design, design system, design contract</a>
+            <a href="#what-it-contains">What goes into the agreement</a>
+            <a href="#one-button">One button, one shared decision</a>
+            <a href="#who-it-helps">What designers, engineers, and teams get</a>
+            <a href="#how-grum-uses-it">How we use it in Grum</a>
+          </nav>
+
+          <section class="blog-section" aria-labelledby="why-we-use-one">
+            <h2 id="why-we-use-one" class="headline-secondary">Why we use a design contract</h2>
+            <p>A design decision can live in a mockup, a component library, a stylesheet, a chat, or someone’s memory. When those sources disagree, the next person has to interpret which one matters. Often, they make another local decision just to keep moving.</p>
+            <p>We want the agreed decisions to be available where implementation happens. A contract names what the team has accepted and makes departures visible while there is still time to discuss them.</p>
+            <p>That matters when people write the code. It matters just as much when an agent writes it. A request to “match our style” leaves a lot open to interpretation. A named token, an approved button, and a clear review path give the implementer something concrete to follow.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="design-system-contract">
+            <h2 id="design-system-contract" class="headline-secondary">A design, a design system, and a design contract do different jobs</h2>
+            <p>These ideas work together. The distinction is the question each one helps the team answer.</p>
+            <dl class="blog-comparison">
+              <div><dt class="headline-small">A design: what should this experience be?</dt><dd>A design works through a particular problem: the user’s task, the flow, the hierarchy, the layout, and the interactions. It helps the team decide what to build and how it should feel in context.</dd></div>
+              <div><dt class="headline-small">A design system: what can we build with?</dt><dd>A design system provides reusable foundations, components, patterns, and guidance. Tokens give shared values meaningful names; components turn repeated interface decisions into reusable building blocks.</dd></div>
+              <div><dt class="headline-small">A design contract: what have we agreed the implementation will follow?</dt><dd>The contract identifies the approved choices, the rules for using them, and how to handle a departure. Paired with checks, it helps the team see whether new code follows that agreement.</dd></div>
+            </dl>
+            <p>A design system can already include governance, checks, and contribution rules. In that case, a contract makes part of that existing agreement explicit and readable by tools. It can sit within the system rather than becoming a separate source to maintain.</p>
+            <p>For context, the <a href="https://design-system.service.gov.uk/components/">GOV.UK Design System pairs components with usage guidance and coded examples</a>. The <a href="https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/">Design Tokens Community Group’s format specification</a> describes how named design decisions can be shared across tools. We build on those ideas by making the team’s approved choices available to the implementation workflow.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="what-it-contains">
+            <h2 id="what-it-contains" class="headline-secondary">What goes into the agreement</h2>
+            <p>A useful contract is specific enough to guide the next change. For the parts of an interface it covers, it should identify:</p>
+            <ul>
+              <li><strong>The approved tokens.</strong> Which names represent the colors, typography, spacing, and radii the implementation should reference.</li>
+              <li><strong>The approved components.</strong> Which button or input to use, how to select its appearance, and which sizes and states belong to that design.</li>
+              <li><strong>The usage rules.</strong> Where a choice belongs and which changes require a conversation with the team.</li>
+              <li><strong>The change process.</strong> Who reviews a departure, whether it is an exception or a reusable pattern, and how the agreement gets updated.</li>
+              <li><strong>The checks.</strong> Which departures tools can detect and which questions still need human review.</li>
+            </ul>
+            <p>The contract can start with a small set of decisions the team already relies on. Its value comes from being clear, current, and used during implementation.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="one-button">
+            <h2 id="one-button" class="headline-secondary">One button, one shared decision</h2>
+            <p>Imagine a new settings page needs a save action. The design shows a primary button. The system provides the button and its tokens. The contract tells the engineer or agent to use that approved implementation, including its existing states.</p>
+            <ol>
+              <li><strong>Reuse the approved button.</strong> Select its documented appearance and reference the shared tokens instead of recreating the styling.</li>
+              <li><strong>Check the change.</strong> If the new code introduces a local radius or overrides a state, a check can flag that departure from the agreement.</li>
+              <li><strong>Resolve the departure.</strong> Return to the approved design, or bring the new requirement to the team for review.</li>
+              <li><strong>Record the decision.</strong> If the team adopts a new reusable pattern, update the agreement deliberately so future work can use it.</li>
+            </ol>
+            <p>A token alone doesn’t capture that whole decision. Referencing <code>var(--primary-base)</code> may select an approved color, while the rest of the button still differs from the approved component. The agreement covers both the ingredients and the component the team chose.</p>
+            <p>This also gives experimentation a path. A new requirement can lead to a new design; review decides whether it belongs in the shared system.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="who-it-helps">
+            <h2 id="who-it-helps" class="headline-secondary">What it gives the people building the product</h2>
+            <h3 class="headline-small">For the designer: decisions that carry into implementation</h3>
+            <p>The designer can make the intended foundations and component choices explicit, then see where implementation departs from them. That creates room to spend review time on the experience, hierarchy, and new requirements instead of repeatedly rediscovering the same styling differences.</p>
+            <p>It also makes feedback more actionable. “Use the approved input and preserve its focus state” gives the engineer a concrete next step.</p>
+            <h3 class="headline-small">For the engineer: clear choices and useful feedback</h3>
+            <p>The engineer gets a smaller set of implementation questions to resolve from scratch. They can find the accepted tokens and components, understand what a check is reporting, and know where to take a requirement the current system doesn’t cover.</p>
+            <p>When they use a coding agent, the same agreement can guide the agent’s work. The engineer still reviews the result, with a shared reference for the design decisions it should preserve.</p>
+            <h3 class="headline-small">For the team: shared memory and deliberate change</h3>
+            <p>The team gains a record that survives a handoff, a new hire, or a switch in tools. People can see which decisions are established and which are open for discussion.</p>
+            <p>Over time, the goal is to spend less effort reconciling accidental differences and more effort improving the product together. A contract helps by making a deviation a visible decision the team can resolve.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="how-grum-uses-it">
+            <h2 id="how-grum-uses-it" class="headline-secondary">How we use it in Grum</h2>
+            <p>In our workflow, Grum makes the repository’s reviewed tokens, approved components, and usage rules available to a coding agent before it changes the UI. The agent uses that contract as its implementation reference, then checks the source for drift before finishing.</p>
+            <p>When a requirement falls outside the agreement, there is a review path. An approved exception covers that departure; adopting a new shared pattern is a separate decision. Keeping those decisions explicit helps the agreement stay useful.</p>
+            <p>A source check has a specific scope. It can identify covered departures in code; it does not establish that a live page looks right or that an experience works well. We still need visual review, accessibility testing, and product judgment.</p>
+            <p>That is why we use a design contract: it carries the decisions we have already made into the next implementation, so the team can give its attention to the decisions that still need to be made.</p>
+            <a class="btn btn-tertiary" href="/">Get early access to Grum <span aria-hidden="true">→</span></a>
+          </section>
+        </article>
+      </main>
+      <footer class="blog-footer body-small" aria-label="Site footer"><a href="/blog">All articles</a><span>Grum · Built to stay consistent.</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a></footer>
+    </div>
+  </body>
+</html>
