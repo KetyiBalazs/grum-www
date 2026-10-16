@@ -1,3 +1,18 @@
+# Repository conventions
+
+## Blog publishing
+
+Apply these conventions whenever creating or editing blog content, even when the request does not explicitly mention this process. This describes the agreed approach; the blog has not been implemented yet.
+
+- Keep the blog file-based and statically served. Use the existing HTML/Vite setup; a database or CMS is not needed for publishing posts.
+- Use `/blog` for the post listing and `/blog/<slug>` for each article. Use lowercase, hyphen-separated slugs and keep published URLs stable.
+- When implementing the blog, put the listing in `blog/index.html` and articles in `blog/<slug>.html`. Reuse shared blog styles and the existing Grum design contract.
+- Keep clean URLs working in both local Vite development/preview (`vite.config.js`) and deployment (`vercel.json`). Account for trailing slashes and ensure unknown post slugs return a 404.
+- Give every post a unique page title, meta description, canonical URL, and social sharing metadata. Include a visible article title, publication date, and author; use semantic article markup and descriptive image alt text.
+- When adding a post, update the blog listing with its title, date, excerpt, and clean URL. List posts newest first and keep unpublished drafts out of the public listing and deployment.
+- Before publishing, verify the listing and article URLs load directly and after refresh, check links and images, inspect narrow and wide layouts, and run the required Grum check. Publish through the repository's normal deployment workflow.
+- If repeated HTML becomes difficult to maintain, Markdown with static page generation is a compatible next step. Keep public URLs stable during any migration.
+
 <!-- BEGIN grum: written by `grum init codex` -->
 
 The design contract for this repository (its color, typography, spacing and radius tokens, its buttons and its text inputs) lives in Grum. Before writing or restyling UI, including any button or input, call the Grum MCP tool `grum_contract`.
