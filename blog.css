@@ -33,6 +33,18 @@
   text-underline-offset: var(--xsmall);
 }
 
+.blog-nav a:not(.btn),
+.blog-footer a:not(.btn) {
+  text-decoration: none;
+}
+
+.blog-nav a:not(.btn):hover,
+.blog-nav a:not(.btn):focus-visible,
+.blog-footer a:not(.btn):hover,
+.blog-footer a:not(.btn):focus-visible {
+  text-decoration: underline;
+}
+
 .blog-body a:focus-visible {
   outline: var(--xsmall) solid var(--primary-base);
   outline-offset: var(--xsmall);
