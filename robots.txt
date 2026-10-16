@@ -9,3 +9,5 @@ Disallow: /contact
 Disallow: /contact.html
 Disallow: /manifesto
 Disallow: /manifesto.html
+
+Sitemap: https://www.grum.so/sitemap.xml

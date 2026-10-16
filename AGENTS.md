@@ -13,6 +13,17 @@ Apply these conventions whenever creating or editing blog content, even when the
 - Before publishing, verify the listing and article URLs load directly and after refresh, check links and images, inspect narrow and wide layouts, and run the required Grum check. Publish through the repository's normal deployment workflow.
 - If repeated HTML becomes difficult to maintain, Markdown with static page generation is a compatible next step. Keep public URLs stable during any migration.
 
+## Search and agent discovery
+
+- Serve the full article in the initial HTML for every visitor, including crawlers. Keep the main content readable without JavaScript, sign-in, or bot challenges; do not serve agents a different article.
+- Lead with a useful answer to the article's question, use descriptive section headings and stable anchors, and support factual claims with relevant primary sources. Include concrete examples and an identifiable author. Avoid keyword stuffing or claims of guaranteed search rankings or AI citations.
+- Keep each article's `BlogPosting` JSON-LD consistent with visible content, author, dates, and canonical URL. Include `url`, `inLanguage`, and the parent blog. Only change publication or modification dates to reflect actual publication or substantive content updates.
+- After adding or updating a public post and its listing entry, run `npm run generate:discovery`, then `npm run check:discovery`. Commit the generated `sitemap.xml` and `feed.xml` with the post. The generator includes only articles linked from the public listing.
+- Keep the sitemap declaration in `robots.txt` and RSS alternate links in the blog pages. Existing global crawler rules allow the public blog, including search agents such as OAI-SearchBot; avoid adding a bot-specific group that accidentally drops the existing exclusions. Search access and permission to train models are separate policies.
+- Before deployment, verify canonical URLs, raw HTML content, metadata, the sitemap, feed, crawler rules, and real 404 responses. After deployment, verify the public URLs and check hosting/CDN bot protections; local checks cannot establish production crawler access.
+- For launch, submit the sitemap in Google Search Console and Bing Webmaster Tools once the site is verified there. Use those tools and server logs to measure indexing, crawl access, search traffic, and available AI referral/citation reporting. Do not claim indexing or submissions happened unless verified.
+- Special AI files such as `llms.txt` are optional experiments, not a substitute for crawlable pages, useful content, links, and indexing. Do not promise that an agent will read or cite them.
+
 <!-- BEGIN grum: written by `grum init codex` -->
 
 The design contract for this repository (its color, typography, spacing and radius tokens, its buttons and its text inputs) lives in Grum. Before writing or restyling UI, including any button or input, call the Grum MCP tool `grum_contract`.

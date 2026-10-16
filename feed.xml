@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Grum blog</title>
+    <link>https://www.grum.so/blog</link>
+    <description>Ideas on design contracts, building with agents, and keeping teams aligned as products grow.</description>
+    <language>en</language>
+    <atom:link href="https://www.grum.so/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is a design contract?</title>
+      <link>https://www.grum.so/blog/what-is-a-design-contract</link>
+      <guid isPermaLink="true">https://www.grum.so/blog/what-is-a-design-contract</guid>
+      <description>What a design contract is, why we use one, and how it helps designers, engineers, and teams carry design decisions into code.</description>
+      <dc:creator>Grum</dc:creator>
+      <dc:date>2026-10-15</dc:date>
+    </item>
+  </channel>
+</rss>

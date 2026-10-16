@@ -2,6 +2,8 @@
   "name": "@verify/grum-www",
   "private": true,
   "scripts": {
+    "generate:discovery": "node scripts/generate-discovery.mjs",
+    "check:discovery": "node scripts/generate-discovery.mjs --check",
     "dev": "vite",
     "preview": "vite preview",
     "check:ds": "node .cursor/hooks/check-ds.mjs --examples"
