@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vibe coding needs a design contract | Grum</title>
+    <meta name="description" content="AI can help teams build more UI, but keeping it consistent still takes shared decisions. How Grum helps designers, engineers, and QA catch design drift earlier." />
+    <meta name="author" content="Grum" />
+    <link rel="canonical" href="https://www.grum.so/blog/vibe-coding-needs-a-design-contract" />
+    <link rel="alternate" type="application/rss+xml" title="Grum blog" href="/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Grum" />
+    <meta property="og:title" content="Vibe coding needs a design contract" />
+    <meta property="og:description" content="A working screen can still drift from the rest of your product. Here's how we help teams carry their design decisions into AI development." />
+    <meta property="og:url" content="https://www.grum.so/blog/vibe-coding-needs-a-design-contract" />
+    <meta property="og:image" content="https://www.grum.so/assets/favicon.png" />
+    <meta property="og:image:alt" content="Grum mark" />
+    <meta property="article:published_time" content="2026-10-16" />
+    <meta property="article:author" content="https://www.grum.so" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/tokens.css" />
+    <link rel="stylesheet" href="/components.css" />
+    <link rel="stylesheet" href="/blog.css" />
+    <script src="/posthog.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://www.grum.so/blog/vibe-coding-needs-a-design-contract#article",
+        "url": "https://www.grum.so/blog/vibe-coding-needs-a-design-contract",
+        "inLanguage": "en",
+        "isPartOf": { "@type": "Blog", "name": "Grum blog", "url": "https://www.grum.so/blog" },
+        "headline": "Vibe coding needs a design contract",
+        "description": "AI can help teams build more UI, but keeping it consistent still takes shared decisions. How Grum helps designers, engineers, and QA catch design drift earlier.",
+        "datePublished": "2026-10-16",
+        "author": { "@type": "Organization", "name": "Grum", "url": "https://www.grum.so" },
+        "publisher": { "@type": "Organization", "name": "Grum", "url": "https://www.grum.so" },
+        "mainEntityOfPage": "https://www.grum.so/blog/vibe-coding-needs-a-design-contract"
+      }
+    </script>
+  </head>
+  <body class="blog-body">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="blog-shell">
+      <nav class="blog-nav body-small" aria-label="Main navigation">
+        <a href="/" aria-label="Grum home"><img src="/assets/coming-soon/logo.svg" alt="Grum" width="112" height="30" /></a>
+        <a href="/blog">All articles</a>
+      </nav>
+      <main id="main">
+        <article>
+          <header class="blog-hero">
+            <p class="body-small">Building with AI</p>
+            <h1 class="headline-main">Vibe coding needs a design contract</h1>
+            <p class="blog-intro">AI can turn a short prompt into a new screen. The design decisions behind that screen need to survive the next prompt, too.</p>
+            <div class="blog-meta body-small"><span>By Grum</span><time datetime="2026-10-16">October 16, 2026</time></div>
+          </header>
+
+          <div class="blog-section">
+            <p>Keeping designers, engineers, and QA aligned was already a job. A designer chose a pattern. An engineer translated it into code. Then someone had to work out where the implementation might have slipped.</p>
+            <p>Which page, out of the whole product? Which component or interaction state? The difference might be a few pixels of spacing or a color a shade or two away from the intended value. Even with the right page open, a designer or QA reviewer would have to notice the difference, inspect the implementation, track down the right Figma file or design sheet, and compare the actual values.</p>
+            <p>That kind of page-by-page, value-by-value review rarely happened. Small differences could ship unnoticed, then get copied into the next screen.</p>
+            <p>AI development gives those decisions more places to be reinterpreted. As more UI is generated and revised, the amount to compare grows, while finding each small slip still takes the same detective work.</p>
+            <aside class="blog-summary" aria-label="The idea">
+              <p><strong>Grum helps by giving the coding agent a design contract before it changes the UI, then checking the source for covered departures from that agreement.</strong> The team gets a shared reference and a way to catch specific design slips earlier.</p>
+            </aside>
+            <p>That is the opportunity we see in vibe coding: help people move from an idea to a working product while carrying their existing design decisions along with them.</p>
+          </div>
+
+          <nav class="blog-section blog-contents body-normal" aria-label="In this article">
+            <h2 class="headline-small">In this article</h2>
+            <a href="#alignment-was-already-work">Alignment was already work</a>
+            <a href="#three-screens">Three screens, three interpretations</a>
+            <a href="#working-is-one-check">A working feature is one part of the review</a>
+            <a href="#where-grum-helps">Where Grum helps</a>
+            <a href="#room-for-judgment">More room for design judgment</a>
+            <a href="#keep-the-momentum">Keep the momentum and the shared decisions</a>
+          </nav>
+
+          <section class="blog-section" aria-labelledby="alignment-was-already-work">
+            <h2 id="alignment-was-already-work" class="headline-secondary">Alignment was already work</h2>
+            <p>A design system gives a team reusable choices. Making those choices show up consistently in the product takes an implementation and review process as well.</p>
+            <p>An engineer might copy a nearby component that predates the latest design decision. A mockup might show the default state while leaving the disabled state open to interpretation. A reviewer may not know which screen or state contains the difference, let alone have the right reference beside it.</p>
+            <p>Existing systems already recognize the need for usage rules. The <a href="https://design-system.service.gov.uk/styles/">GOV.UK Design System's style guidance</a>, for example, asks teams to preserve the established meaning of colors and the styling of buttons and inputs.</p>
+            <p>With AI in the workflow, those agreements need to reach the agent too. A useful design rule sitting outside its working context still depends on a person remembering to bring it into every task.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="three-screens">
+            <h2 id="three-screens" class="headline-secondary">Three screens, three interpretations</h2>
+            <p>Imagine a team adding a billing page, updating account settings, and shortening onboarding. Each task starts with a reasonable prompt. Each result looks polished enough to keep working on.</p>
+            <p>But the billing page gets a newly styled payment button. The settings form uses a local input border. Onboarding gets a different heading size because it looked better in the agent's first attempt.</p>
+            <p>Then another prompt asks for a loading state. Another adjusts the mobile layout. Someone copies the billing page's button into a fourth screen. A local choice starts becoming a pattern before anyone has agreed it should be one.</p>
+            <p>This is an illustrative scenario, but it shows why drift can be hard to spot. You may need to compare screens, inspect an interaction state, or look at the implementation to notice it. A tidy screenshot of one page doesn't tell the whole story.</p>
+            <p>Every extra place that makes its own version adds another decision for the team to reconcile later.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="working-is-one-check">
+            <h2 id="working-is-one-check" class="headline-secondary">A working feature is one part of the review</h2>
+            <p>The payment submits. Settings save. Onboarding reaches the dashboard. Those are useful things to verify, and they don't establish whether the interface follows the team's design decisions.</p>
+            <p>A test that checks a successful form submission doesn't, by itself, prove that the input uses the approved typography or preserves the intended focus state. Visual review and design checks answer different questions from that functional assertion.</p>
+            <p>QA needs a clear reference for what is expected. Designers need a way to point to an established decision. Engineers need to know whether a difference is an accident, an accepted exception, or a new requirement worth discussing.</p>
+            <p>Expecting a final review to uncover every small departure assumes someone can find the affected pages, locate the current design reference, and inspect each relevant value. As implementation speeds up, that manual search has more ground to cover.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="where-grum-helps">
+            <h2 id="where-grum-helps" class="headline-secondary">Where Grum helps</h2>
+            <p>We use a <a href="/blog/what-is-a-design-contract">design contract</a> to make the reviewed tokens, approved components, and usage rules available where the implementation happens. That gives the agent concrete choices to use as it builds.</p>
+            <dl class="blog-comparison">
+              <div><dt class="headline-small">Before the change: provide the agreement</dt><dd>The agent reads the contract and identifies the approved input, button, and typography choices. The task starts with the team's existing decisions in context.</dd></div>
+              <div><dt class="headline-small">During implementation: reuse those choices</dt><dd>The agent uses the named tokens and approved components. If a requirement needs something the contract doesn't cover, the team has a specific decision to review.</dd></div>
+              <div><dt class="headline-small">Before finishing: check for drift</dt><dd>Grum checks the source against the contract. Covered departures can be resolved by returning to an approved choice or following the team's review path.</dd></div>
+            </dl>
+            <p>In our example, that means the billing task can start with the existing button, the settings task can reuse the approved input, and onboarding can reference the shared type tokens. The agent has less to invent for choices the team has already made.</p>
+            <p>For the departures the source check covers, the team also gets a specific finding to investigate. Review can start with an identified difference in code, rather than depending on someone spotting a slightly different shade while browsing the product.</p>
+            <p>Instructions and checks work together here. <a href="https://docs.github.com/en/copilot/concepts/prompting/response-customization">GitHub's documentation on custom instructions</a> explains how repository context can guide Copilot, while also noting that AI may follow instructions inconsistently. Giving an agent a rule is one step; checking the resulting implementation is another.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="room-for-judgment">
+            <h2 id="room-for-judgment" class="headline-secondary">More room for design judgment</h2>
+            <p>A contract doesn't decide whether onboarding is clear, whether a layout is useful, or whether the product needs a new interaction. Those remain design and product questions.</p>
+            <p>It can help the team spend less attention rediscovering covered departures from decisions it has already made:</p>
+            <ul>
+              <li><strong>Designers</strong> can make their approved choices explicit and focus review on the experience and new requirements.</li>
+              <li><strong>Engineers</strong> can give agents a reusable implementation reference and resolve concrete findings against it.</li>
+              <li><strong>QA</strong> can use the shared agreement alongside functional, visual, and accessibility checks.</li>
+            </ul>
+            <p>There is an important boundary: Grum's source check reports what it can identify in code. It doesn't certify the appearance of a deployed page or the quality of an experience. Testing different screens, states, and devices still matters.</p>
+            <p>A new design can also be a good decision. The review path lets the team deliberately adopt a new pattern or accept an exception, while keeping that decision distinct from accidental drift.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="keep-the-momentum">
+            <h2 id="keep-the-momentum" class="headline-secondary">Keep the momentum and the shared decisions</h2>
+            <p>We want people to try ideas, make useful things, and see their product take shape. AI can be part of that process, whether the person prompting it is a designer, an engineer, or a founder building a first version.</p>
+            <p>As the product grows, the team needs a way to preserve what it has learned. Which patterns work? Which components are approved? Which changes deserve a fresh conversation?</p>
+            <p>Grum brings those answers into the implementation workflow. The next prompt can build on the team's decisions, and the next review can focus on what has actually changed.</p>
+            <p>That is how we want to make vibe coding better: help every new screen belong to the product the team is building together.</p>
+            <a class="btn btn-tertiary" href="/">Get early access to Grum <span aria-hidden="true">→</span></a>
+          </section>
+        </article>
+      </main>
+      <footer class="blog-footer body-small" aria-label="Site footer"><a href="/blog">All articles</a><span>Grum · Built to stay consistent.</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a></footer>
+    </div>
+  </body>
+</html>
