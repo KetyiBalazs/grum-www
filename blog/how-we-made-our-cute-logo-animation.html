@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How we made our cute logo animation | Grum</title>
+    <meta name="description" content="How we brought Grum's logo to life with AI, a sleepy character idea, and storyboards that made animation feedback much easier." />
+    <meta name="author" content="Grum" />
+    <link rel="canonical" href="https://www.grum.so/blog/how-we-made-our-cute-logo-animation" />
+    <link rel="alternate" type="application/rss+xml" title="Grum blog" href="/feed.xml" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Grum" />
+    <meta property="og:title" content="How we made our cute logo animation" />
+    <meta property="og:description" content="We gave Grum's logo hands, feet, and a very big yawn. Here's how the animation came together." />
+    <meta property="og:url" content="https://www.grum.so/blog/how-we-made-our-cute-logo-animation" />
+    <meta property="og:image" content="https://www.grum.so/assets/blog/logo-animation/yawn-storyboard.png" />
+    <meta property="og:image:alt" content="A storyboard showing Grum's logo stretching and yawning across a sequence of poses." />
+    <meta property="article:published_time" content="2026-10-15" />
+    <meta property="article:author" content="https://www.grum.so/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/tokens.css" />
+    <link rel="stylesheet" href="/components.css" />
+    <link rel="stylesheet" href="/blog.css" />
+    <script src="/posthog.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://www.grum.so/blog/how-we-made-our-cute-logo-animation#article",
+        "url": "https://www.grum.so/blog/how-we-made-our-cute-logo-animation",
+        "inLanguage": "en",
+        "isPartOf": { "@type": "Blog", "name": "Grum blog", "url": "https://www.grum.so/blog" },
+        "headline": "How we made our cute logo animation",
+        "description": "How we brought Grum's logo to life with AI, a sleepy character idea, and storyboards that made animation feedback much easier.",
+        "image": "https://www.grum.so/assets/blog/logo-animation/yawn-storyboard.png",
+        "datePublished": "2026-10-15",
+        "author": { "@type": "Organization", "name": "Grum", "url": "https://www.grum.so" },
+        "publisher": { "@type": "Organization", "name": "Grum", "url": "https://www.grum.so" },
+        "mainEntityOfPage": "https://www.grum.so/blog/how-we-made-our-cute-logo-animation"
+      }
+    </script>
+  </head>
+  <body class="blog-body">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="blog-shell">
+      <nav class="blog-nav body-small" aria-label="Main navigation">
+        <a href="/" aria-label="Grum home"><img src="/assets/coming-soon/logo.svg" alt="Grum" width="112" height="30" /></a>
+        <a href="/blog">All articles</a>
+      </nav>
+      <main id="main">
+        <article>
+          <header class="blog-hero">
+            <p class="body-small">Making Grum</p>
+            <h1 class="headline-main">How we made our cute logo animation</h1>
+            <p class="blog-intro">We gave our logo hands, feet, and a very big yawn. Getting there took a few wrong turns and a much better way to give feedback.</p>
+            <div class="blog-meta body-small"><span>By Grum</span><time datetime="2026-10-15">October 15, 2026</time></div>
+          </header>
+
+          <div class="blog-section">
+            <p>What would Grum's logo do if it got bored sitting in a website header all day? We decided it might get sleepy, stretch its little arms, and let out a yawn.</p>
+            <p>That idea became a logo animation made with AI. We explored poses in storyboard grids, used Claude to animate the mark as an SVG, and refined individual frames until the movement had some personality.</p>
+            <p>The useful part of the experiment was learning how to direct it. A reference image or an annotated frame often got us further than another paragraph of instructions.</p>
+            <details class="blog-animation">
+              <summary class="body-normal-bold">Watch our logo yawn</summary>
+              <figure class="blog-media blog-logo-animation">
+                <img src="/assets/blog/logo-animation/yawn.gif" alt="Grum's red logo stretches its upper nodes like arms and opens into a sleepy yawn before settling back into shape." width="158" height="160" />
+                <figcaption class="body-small">A sleepy little Grum. Close this section to hide the looping animation.</figcaption>
+              </figure>
+            </details>
+          </div>
+
+          <nav class="blog-section blog-contents body-normal" aria-label="In this article">
+            <h2 class="headline-small">In this article</h2>
+            <a href="#finding-the-motion">Finding motion that felt like Grum</a>
+            <a href="#a-little-character">Giving the logo a little character</a>
+            <a href="#better-feedback">The storyboard became our feedback tool</a>
+            <a href="#motion-references">Showing the movement we meant</a>
+            <a href="#what-we-learned">What we'd do again</a>
+          </nav>
+
+          <section class="blog-section" aria-labelledby="finding-the-motion">
+            <h2 id="finding-the-motion" class="headline-secondary">Finding motion that felt like Grum</h2>
+            <p>We started with tools that promised quick logo animations. The results could shake, expand, or move the mark around, but they didn't do much with its particular shape. We wanted to see what the Grum logo itself could express.</p>
+            <p>ChatGPT was useful for exploring that question visually. We asked for a five-by-five storyboard grid: five animation ideas, with five key poses for each. It gave us several directions to react to before committing to one.</p>
+            <figure class="blog-media">
+              <img src="/assets/blog/logo-animation/motion-studies.png" alt="A five-by-five storyboard grid exploring motion ideas for Grum's logo, including breathing, elastic bouncing, and magnetic assembly." width="849" height="884" loading="lazy" />
+              <figcaption class="body-small">Early motion studies. Seeing the poses together made it easier to choose a direction.</figcaption>
+            </figure>
+            <p>Turning those concepts into motion was harder. The generated animations kept drifting away from the storyboard. We tried several instructions and output formats, including GIF, SVG, and Lottie, without getting the result we wanted.</p>
+            <p>Trying Claude gave us a more promising starting point. It chose animated SVG on its own, and the first version felt tailored to the logo. There was enough there to keep going.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="a-little-character">
+            <h2 id="a-little-character" class="headline-secondary">Giving the logo a little character</h2>
+            <p>During the experiments, we started referring to the top two nodes as hands and the bottom two as feet. That gave us a shared vocabulary for directing a fairly abstract shape.</p>
+            <p>Then came the sleepy-header idea. We could imagine the logo slouching, nodding off, or yawning after sitting there all day. A yawn gave the animation an action with a beginning, a stretch, and a return to rest.</p>
+            <p>Thinking about it as a character also made the feedback more specific. We could ask for its hands to reach further, or for a stretch to feel bigger. Those directions were much easier to work with than asking for a logo to be more interesting.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="better-feedback">
+            <h2 id="better-feedback" class="headline-secondary">The storyboard became our feedback tool</h2>
+            <p>Our most useful habit was asking for a storyboard with each new animation version. That let us inspect the movement as a sequence and point to the exact moment we wanted to change.</p>
+            <figure class="blog-media">
+              <img src="/assets/blog/logo-animation/yawn-storyboard.png" alt="Numbered frames of Grum's yawn animation, showing the logo moving from rest through a wide stretch and back." width="1920" height="1490" loading="lazy" />
+              <figcaption class="body-small">The yawn broken into frames. Each pose gave us something concrete to discuss.</figcaption>
+            </figure>
+            <p>For example, we wanted the hands to extend further and shake during frames 32 and 33. Naming those frames removed a lot of ambiguity. The request had a location in the animation, a part of the character, and a specific change.</p>
+            <p>It worked for small shape problems too. We spotted a tiny bulge where a node met its stem. Circling that spot on a frame helped the agent fix the contour while preserving the rest of the movement.</p>
+            <p>We kept moving between the full animation and the frame sheet. Watching the loop told us how it felt. Looking at the frames helped us explain why.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="motion-references">
+            <h2 id="motion-references" class="headline-secondary">Showing the movement we meant</h2>
+            <p>Another experiment involved jumping jacks. We knew the movement we wanted, but describing the coordination of the arms and legs wasn't getting us there.</p>
+            <p>A human motion reference made that much easier. It showed the relationship between the poses directly, giving the agent something more useful than another attempt to describe the movement in words.</p>
+            <p>There was also room for broader direction. Asking it to "give it life" sometimes introduced small movements we hadn't thought to specify. Those surprises were useful once we had a clear character and a way to review the result.</p>
+          </section>
+
+          <section class="blog-section" aria-labelledby="what-we-learned">
+            <h2 id="what-we-learned" class="headline-secondary">What we'd do again</h2>
+            <p>If we were starting another Grum animation tomorrow, we'd keep the same few habits:</p>
+            <ul>
+              <li><strong>Start with an action.</strong> A sleepy yawn gives the movement a reason and helps us judge whether it feels right.</li>
+              <li><strong>Explore with a small storyboard.</strong> Compare a few ideas before spending time refining one.</li>
+              <li><strong>Name the parts.</strong> Hands and feet made it easier to direct an abstract logo.</li>
+              <li><strong>Ask for frames with each version.</strong> Use frame numbers and annotations to make feedback precise.</li>
+              <li><strong>Bring a reference.</strong> Show the rhythm or pose when the words aren't getting the idea across.</li>
+            </ul>
+            <p>For this experiment, Claude gave us the strongest animation starting point. The bigger lesson was how much we could contribute through visual references, a sense of movement, and careful feedback. The agent produced the motion; we still had to decide what felt like Grum.</p>
+            <p>Now our little mark can have a sleepy moment of its own.</p>
+            <a class="btn btn-tertiary" href="/blog/what-is-a-design-contract">Read about Grum's design contract <span aria-hidden="true">→</span></a>
+          </section>
+        </article>
+      </main>
+      <footer class="blog-footer body-small" aria-label="Site footer"><a href="/blog">All articles</a><span>Grum · Built to stay consistent.</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a></footer>
+    </div>
+  </body>
+</html>

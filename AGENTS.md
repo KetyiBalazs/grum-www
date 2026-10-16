@@ -1,5 +1,12 @@
 # Repository conventions
 
+## Markdown and blog writing style
+
+- Apply these rules to all Markdown documentation and blog content, including HTML prose, titles, metadata, and generated feeds, even when the request does not explicitly mention them.
+- Never use em dashes. Rewrite the sentence using commas, parentheses, periods, or a regular hyphen where appropriate.
+- Use only straight ASCII quotation marks and apostrophes: `"` and `'`. Do not use curly or smart quotes.
+- Before finishing Markdown or blog edits, check the changed content for em dashes and curly quotes and replace any that remain.
+
 ## Blog publishing
 
 Apply these conventions whenever creating or editing blog content, even when the request does not explicitly mention this process.
@@ -9,6 +16,8 @@ Apply these conventions whenever creating or editing blog content, even when the
 - Put the listing in `blog/index.html` and articles in `blog/<slug>.html`. Reuse `blog.css`, the shared components, and the existing Grum design contract. Use `blog/what-is-a-design-contract.html` as the article template, updating its content, date, canonical URL, social metadata, and structured data for each post.
 - Keep clean URLs working in both local Vite development/preview (`vite.config.js`) and deployment (`vercel.json`). Account for trailing slashes and ensure unknown post slugs return a 404.
 - Give every post a unique page title, meta description, canonical URL, and social sharing metadata. Include a visible article title, publication date, and author; use semantic article markup and descriptive image alt text.
+- Publish posts under the Grum name by default. Do not reference Sean or Balazs, their personal identities, personal websites, profiles, or contact details unless the user explicitly requests that exception for the post. Apply this to article prose, bylines, listings, captions, alt text, links, metadata, structured data, and generated feeds.
+- A personal source URL provided for adaptation is research material, not permission to publish a personal attribution or backlink. Use `Grum` for visible and metadata authorship and an `Organization` author pointing to `https://www.grum.so` in structured data unless the user explicitly specifies otherwise. Check the post, listing, and generated discovery files for personal references before finishing.
 - When adding a post, update the blog listing with its title, date, excerpt, and clean URL. List posts newest first and keep unpublished drafts out of the public listing and deployment.
 - Before publishing, verify the listing and article URLs load directly and after refresh, check links and images, inspect narrow and wide layouts, and run the required Grum check. Publish through the repository's normal deployment workflow.
 - If repeated HTML becomes difficult to maintain, Markdown with static page generation is a compatible next step. Keep public URLs stable during any migration.

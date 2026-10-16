@@ -147,6 +147,47 @@
   overflow-wrap: anywhere;
 }
 
+.blog-media {
+  display: grid;
+  gap: calc(var(--number) * 2);
+  min-width: 0;
+  margin: 0;
+}
+
+.blog-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--corner-medium);
+}
+
+.blog-media figcaption {
+  color: var(--text-secondary);
+}
+
+.blog-animation summary {
+  cursor: pointer;
+  color: var(--primary-base);
+}
+
+.blog-animation summary:focus-visible {
+  outline: var(--xsmall) solid var(--primary-base);
+  outline-offset: var(--xsmall);
+}
+
+.blog-logo-animation {
+  justify-items: center;
+  padding: calc(var(--number) * 4);
+  margin-top: calc(var(--number) * 3);
+  background: var(--white);
+  border-radius: var(--corner-medium);
+}
+
+.blog-logo-animation img {
+  width: auto;
+  max-width: 100%;
+}
+
 .blog-post h2 a {
   text-decoration: none;
 }
