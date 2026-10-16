@@ -1,0 +1,39 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "apply_patch|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx --yes --prefer-offline @grum-os/cli hook codex-post-tool",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx --yes --prefer-offline @grum-os/cli hook codex-pre-tool",
+            "timeout": 120
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx --yes --prefer-offline @grum-os/cli hook codex-stop",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

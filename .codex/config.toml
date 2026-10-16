@@ -1,0 +1,5 @@
+# BEGIN grum: written by `grum init codex`
+[mcp_servers.grum]
+command = "npx"
+args = ["--yes", "--prefer-online", "@grum-os/cli@latest", "mcp"]
+# END grum

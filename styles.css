@@ -459,6 +459,7 @@ body {
   width: 20px;
   height: 20px;
   color: var(--primary-base);
+  transform: translateY(-1.25px);
 }
 
 .click-spark {
